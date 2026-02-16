@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bank Account Details</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e5e7eb;
+}
+
+/* CENTER CONTAINER */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: #111827;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 650px;
+    box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h2 {
+    margin: 0;
+    color: #3b82f6;
+    font-size: 26px;
+}
+
+/* BANK TABLE */
+.bank-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.bank-table tr {
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.bank-table td {
+    padding: 12px 5px;
+}
+
+.label {
+    font-weight: bold;
+    color: #9ca3af;
+    width: 200px;
+}
+
+.value {
+    color: #f9fafb;
+}
+
+/* COPY BUTTON */
+.copy-btn {
+    margin-left: 10px;
+    padding: 4px 10px;
+    font-size: 12px;
+    background: #3b82f6;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.copy-btn:hover {
+    background: #2563eb;
+}
+
+/* FOOTER */
+.footer {
+    margin-top: 30px;
+    font-size: 13px;
+    color: #9ca3af;
+    text-align: center;
+}
+
+/* SECURITY BOX */
+.security {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(59,130,246,0.1);
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+.container {
+    padding: 25px;
+}
+
+.label {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.bank-table td {
+    display: block;
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+<div class="container">
+
+<div class="header">
+<h2>Bank Account Details</h2>
+</div>
+
+<p>Hello,</p>
+
+<p>Please use the bank details below for your transfer:</p>
+
+<table class="bank-table">
+
+<tr>
+<td class="label">Bank Name:</td>
+<td class="value">SSB Bank</td>
+</tr>
+
+<tr>
+<td class="label">Account Name:</td>
+<td class="value">
+Mark Kevin Viernes
+<button class="copy-btn" onclick="copyText('Mark Kevin Viernes')">Copy</button>
+</td>
+</tr>
+
+<tr>
+<td class="label">Account Number:</td>
+<td class="value">
+410150533705
+<button class="copy-btn" onclick="copyText('410150533705')">Copy</button>
+</td>
+</tr>
+
+<tr>
+<td class="label">Routing Number:</td>
+<td class="value">
+043087080
+<button class="copy-btn" onclick="copyText('043087080')">Copy</button>
+</td>
+</tr>
+
+<tr>
+<td class="label">Address:</td>
+<td class="value">8700 Perry Highway Pittsburgh PA 15237 US</td>
+</tr>
+
+</table>
+
+<div class="security">
+For confirmation after transfer, please send proof of payment.
+All information is confidential.
+</div>
+
+<div class="footer">
+Secure Transfer Portal • Encrypted Display
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function copyText(text) {
+    navigator.clipboard.writeText(text);
+    alert("Copied: " + text);
+}
+
+</script>
+
+</body>
+</html>

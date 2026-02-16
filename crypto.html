@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Payment Information</h1>
+<div class="payment-box">
+        <h2>Crypto Wallet</h2>
+        <p id="crypto">0x1234567890abcdef1234567890abcdef</p>
+        <button onclick="copyText('crypto')">Copy Wallet</button>
+    </div>
+</div>
+<script>
+function copyText(id) {
+    const text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text);
+    alert("Copied: " + text);
+}
+</script>
+
+</body>
+</html>
